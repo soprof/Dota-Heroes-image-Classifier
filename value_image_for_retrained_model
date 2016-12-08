@@ -1,0 +1,5 @@
+python label_image.py tf_files/flower_photos/daisy/21652746_cc379e0eea_m.jpg
+
+python label_image.py tf_files/flower_photos/roses/2414954629_3708a1a04d.jpg
+
+python label_image.py sky.jpg

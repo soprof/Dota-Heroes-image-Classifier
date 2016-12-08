@@ -1,0 +1,27 @@
+!!! DO NOT USE DATA SOURCE FOLDER FOR TRAINING DATA !!!
+
+python tensorflow11/tensorflow/tensorflow/examples/image_retraining/retrain.py \
+--bottleneck_dir=heroes2data/bottlenecks \
+--how_many_training_steps 500 \
+--model_dir=heroes2data/inception \
+--output_graph=heroes2data/retrained_graph.pb \
+--output_labels=heroes2data/retrained_labels.txt \
+--image_dir heroes2
+
+
+works:
+python tensorflow11/tensorflow/tensorflow/examples/image_retraining/retrain.py \
+--bottleneck_dir=heroestestdata/bottlenecks \
+--how_many_training_steps 500 \
+--model_dir=heroestestdata/inception \
+--output_graph=heroestestdata/retrained_graph.pb \
+--output_labels=heroestestdata/retrained_labels.txt \
+--image_dir heroestest
+
+python tensorflow11/tensorflow/tensorflow/examples/image_retraining/retrain.py \
+--bottleneck_dir=heroes3data/bottlenecks \
+--how_many_training_steps 500 \
+--model_dir=heroes3data/inception \
+--output_graph=heroes3data/retrained_graph.pb \
+--output_labels=heroes3data/retrained_labels.txt \
+--image_dir heroes3
