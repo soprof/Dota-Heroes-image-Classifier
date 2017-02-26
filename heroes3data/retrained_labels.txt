@@ -1,0 +1,113 @@
+naga siren
+medusa
+undying
+riki
+tusk
+sniper
+night stalker
+dark seer
+pugna
+witch doctor
+bane
+anti mage
+ember spirit
+batrider
+abaddon
+kunkka
+weaver
+centaur warrunner
+clinkz
+earthshaker
+lion
+necrophos
+chen
+troll warlord
+treant protector
+disruptor
+spirit breaker
+legion commander
+death prophet
+drow ranger
+invoker
+juggernaut
+ursa
+lycan
+shadow shaman
+meepo
+outworld devourer
+tinker
+broodmother
+huskar
+techies
+elder titan
+omniknight
+terrorblade
+alchemist
+nyx assassin
+sven
+shadow demon
+puck
+slark
+mirana
+lifestealer
+earth spirit
+dragon knight
+morphling
+luna
+tiny
+razor
+templar assassin
+pudge
+phantom lancer
+warlock
+sand king
+zeus
+gyrocopter
+silencer
+enigma
+storm spirit
+faceless void
+venomancer
+doom
+lina
+monkey king
+lone druid
+brewmaster
+wraith king
+clockwerk
+keeper of the light
+underlord
+vengeful spirit
+bristleback
+lich
+visage
+nature s prophet
+slardar
+shadow fiend
+tidehunter
+io
+rubick
+enchantress
+dazzle
+winter wyvern
+timbersaw
+magnus
+crystal maiden
+arc warden
+phantom assassin
+ogre magi
+phoenix
+leshrac
+chaos knight
+beastmaster
+bloodseeker
+queen of pain
+skywrath mage
+jakiro
+viper
+spectre
+bounty hunter
+windranger
+ancient apparition
+axe
+oracle
