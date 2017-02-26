@@ -9,10 +9,10 @@ image_data = tf.gfile.FastGFile(image_path, 'rb').read()
 
 # Loads label file, strips off carriage return
 label_lines = [line.rstrip() for line 
-                   in tf.gfile.GFile("heroes2data/retrained_labels.txt")]
+                   in tf.gfile.GFile("heroes3data/retrained_labels.txt")]
 
 # Unpersists graph from file
-with tf.gfile.FastGFile("heroes2data/retrained_graph.pb", 'rb') as f:
+with tf.gfile.FastGFile("heroes3data/retrained_graph.pb", 'rb') as f:
     graph_def = tf.GraphDef()
     graph_def.ParseFromString(f.read())
     _ = tf.import_graph_def(graph_def, name='')
