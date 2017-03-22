@@ -2,6 +2,7 @@ import tensorflow as tf
 import sys
 import imghdr
 from PIL import Image
+import numpy as np
 
 # change this as you see fit
 image_path = sys.argv[1]
@@ -30,13 +31,12 @@ with tf.Session() as sess:
              {'DecodeJpeg/contents:0': image_data})
 
     if imghdr.what(image_path) == "png":
-        im = Image.open(image_path).convert('RGB')
-        # bg = Image.new("RGB", im.size, (255,255,255))
-        # bg.paste(im,im)
-        im.save("result2.jpg")
-        image_data = tf.gfile.FastGFile("result2.jpg", 'rb').read()
+        image = Image.open(image_path)
+        image_array = np.array(image)[:, :, 0:3]  # Select RGB channels only.
+
         predictions = sess.run(softmax_tensor, \
-             {'DecodeJpeg/contents:0': image_data})
+             {'DecodeJpeg:0': image_array})
+
 
     # Sort to show labels of first prediction in order of confidence
     top_k = predictions[0].argsort()[-len(predictions[0]):][::-1]
