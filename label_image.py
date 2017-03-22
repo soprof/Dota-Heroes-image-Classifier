@@ -1,5 +1,7 @@
 import tensorflow as tf
 import sys
+import imghdr
+from PIL import Image
 
 # change this as you see fit
 image_path = sys.argv[1]
@@ -21,7 +23,19 @@ with tf.Session() as sess:
     # Feed the image_data as input to the graph and get first prediction
     softmax_tensor = sess.graph.get_tensor_by_name('final_result:0')
 
-    predictions = sess.run(softmax_tensor, \
+    print("type: %s",imghdr.what(image_path))
+
+    if imghdr.what(image_path) == "jpeg":
+        predictions = sess.run(softmax_tensor, \
+             {'DecodeJpeg/contents:0': image_data})
+
+    if imghdr.what(image_path) == "png":
+        im = Image.open(image_path).convert('RGB')
+        # bg = Image.new("RGB", im.size, (255,255,255))
+        # bg.paste(im,im)
+        im.save("result2.jpg")
+        image_data = tf.gfile.FastGFile("result2.jpg", 'rb').read()
+        predictions = sess.run(softmax_tensor, \
              {'DecodeJpeg/contents:0': image_data})
 
     # Sort to show labels of first prediction in order of confidence
